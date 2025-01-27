@@ -19,6 +19,10 @@ Route::get('/', function () {
     return view('home');
 });
 
+Route::get('/finance', function () {
+    return view('home');
+});
+
 Route::get('/job', function(){
     return view('job',[
         'job' => job::all()
