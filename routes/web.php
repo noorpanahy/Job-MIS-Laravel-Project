@@ -21,8 +21,11 @@ Route::get('/', function () {
 
 
 Route::get('/job', function(){
+        // $job = job::all();
+        // dd($job[1]->title);
+    $jobs = job::with('employer')->get();;
     return view('job',[
-        'job' => job::all()
+        'job' => $jobs
     ]);
 });
 
