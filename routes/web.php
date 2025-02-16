@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Models\job;
+use App\Models\Job;
 use App\Models\contact;
 
 /*
@@ -20,13 +20,19 @@ Route::get('/', function () {
 });
 
 
-Route::get('/job', function(){
-        // $job = job::all();
+Route::get('/jobs', function(){
+        // $job = Job::all();
         // dd($job[1]->title);
-    $jobs = job::with('employer')->get();;
-    return view('job',[
-        'job' => $jobs
+    $job = Job::with('employer')->get();
+    return view('jobs',[
+        'jobs' => $job
     ]);
+});
+
+Route::get('/jobs/{id}', function($id){
+    $job = Job::find($id);
+
+    return view('job', ['job' => $job]);
 });
 
 

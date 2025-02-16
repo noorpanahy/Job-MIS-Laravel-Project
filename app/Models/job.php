@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 use App\models\Employer;
 use App\models\tag;
 
-class job extends Model
+class Job extends Model
 {
     use HasFactory;
     protected $table = 'job_listings';
