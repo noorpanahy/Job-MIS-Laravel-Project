@@ -5,7 +5,8 @@
 
     <h2 class="font-blod text-lg"> <strong> {{ $contacts['title'] }} </strong></h2>
     <p>
-        You can find the <strong class="text-black-500"> {{ $contacts['name'] }} </strong> on <strong class="text-blue-500 hover:underline"> {{ $contacts['url'] }} </strong> link.
+        You can find the <strong class="text-black-900"> {{ $contacts['name'] }} </strong> on <strong class="text-blue-500
+        hover:underline"> {{ $contacts['url'] }} </strong> link.
     </p>
 
 

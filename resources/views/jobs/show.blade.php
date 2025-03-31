@@ -6,7 +6,7 @@
     <h2 class="font-bold text-lg">{{ $job['title'] }}</h2>
 
     <p>
-        this job pays you {{ $job['Salary']}} per year.
+        this job pays you {{ $job['salary']}} per year.
     </p>
 
 
