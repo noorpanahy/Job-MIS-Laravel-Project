@@ -1,10 +1,12 @@
 <?php
 
-use App\Http\Controllers\ContactController;
 use App\Models\Job;
 use App\Models\contact;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\JobController;
+use App\Http\Controllers\ContactController;
+use App\Http\Controllers\SessionController;
+use App\Http\Controllers\RegisterUserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,23 +23,16 @@ Route::view('/', 'home');
 
 Route::resource('jobs', JobController::class);
 
-
-
 Route::controller(ContactController::class)->group(function(){
     Route::get('/contact', 'contact');
     Route::get('/contacts/{id}', 'contacts');
-
 });
 
+Route::get('/register', [RegisterUserController::class, 'create']);
+Route::POST('/register', [RegisterUserController::class, 'store']);
 
+Route::get('/login', [SessionController::class, 'create']);
+Route::post('/login', [SessionController::class, 'store']);
 
-// Route::get('/contacts/{id}', function($id){
-//     return view('contacts', ['contacts' => contact::find($id)] );
-// });
-
-// Route::get('/contact', function(){
-//     return view('contact',[
-//         'contacts' => contact::pages()
-//     ]);
-// });
+Route::post('/logout', [SessionController::class, 'destroy']);
 
