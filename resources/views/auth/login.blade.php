@@ -14,22 +14,22 @@
 
                   <x-form-field>
 
-                    <x-form-label for="Email">Email</x-form-label>
+                    <x-form-label for="email">Email</x-form-label>
                     <div class="mt-2">
-                      <x-form-input name="Email" id="Email" type="email" required/>
+                      <x-form-input name="email" id="email" :value="old('email')" type="email" required/>
 
-                      <x-form-error name="Email" />
+                      <x-form-error name="email" />
                     </div>
                   </x-form-field>
                   <br>
 
                     <x-form-field>
 
-                        <x-form-label for="Password">Password</x-form-label>
+                        <x-form-label for="password">Password</x-form-label>
                         <div class="mt-2">
-                          <x-form-input name="Password" id="Password" type="password" required/>
+                          <x-form-input name="password" id="password" type="password" required/>
 
-                          <x-form-error name="Password" />
+                          <x-form-error name="password" />
                         </div>
                       </x-form-field>
 
