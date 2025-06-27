@@ -34,5 +34,6 @@ Route::POST('/register', [RegisterUserController::class, 'store']);
 Route::get('/login', [SessionController::class, 'create']);
 Route::post('/login', [SessionController::class, 'store']);
 
+//logout has been done on 2025 july 27
 Route::post('/logout', [SessionController::class, 'destroy']);
 
