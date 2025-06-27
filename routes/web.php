@@ -36,4 +36,3 @@ Route::post('/login', [SessionController::class, 'store']);
 
 Route::post('/logout', [SessionController::class, 'destroy']);
 
-Route::post('/logout', [SessionController::class, 'destroy']);
